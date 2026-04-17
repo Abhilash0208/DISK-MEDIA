@@ -1,0 +1,111 @@
+.page { max-width: 820px; margin: 0 auto; padding: 40px 24px 120px; }
+
+/* Header */
+.header { display: flex; gap: 32px; margin-bottom: 36px; align-items: flex-start; }
+@media (max-width: 640px) { .header { flex-direction: column; } }
+
+.artwork {
+  width: 200px; height: 200px; flex-shrink: 0;
+  border-radius: var(--radius-xl); overflow: hidden;
+  background: var(--bg-card); display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+}
+.artwork img { width: 100%; height: 100%; object-fit: cover; }
+.artworkIcon { font-size: 64px; }
+
+.info { flex: 1; padding-top: 4px; }
+.typeTag {
+  display: inline-block; font-size: 10px; font-weight: 800;
+  color: var(--accent2); letter-spacing: 1px; margin-bottom: 12px;
+}
+.title {
+  font-family: var(--font-display); font-size: clamp(20px, 3vw, 30px);
+  font-weight: 800; letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 14px;
+}
+.meta {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  font-size: 12.5px; color: var(--text-muted); margin-bottom: 22px;
+}
+.authorAvatar { width: 22px; height: 22px; border-radius: 50%; object-fit: cover; }
+.authorInitial {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--accent-muted); color: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; font-weight: 700;
+}
+.authorName { color: var(--text-secondary); font-weight: 500; }
+.sep { color: var(--border); }
+
+.actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.playBtn {
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px 24px; background: var(--accent); color: #fff;
+  border-radius: var(--radius-md); font-size: 14px; font-weight: 700;
+  font-family: var(--font-display); transition: background var(--transition);
+}
+.playBtn:hover { background: var(--accent-hover); }
+.playBtnPause { background: var(--bg-card); color: var(--text-primary); border: 1.5px solid var(--border); }
+.playBtnPause:hover { background: var(--bg-hover); }
+.secondaryBtn {
+  display: flex; align-items: center; gap: 7px;
+  padding: 11px 18px; background: var(--bg-card);
+  border: 1.5px solid var(--border); border-radius: var(--radius-md);
+  font-size: 13.5px; color: var(--text-secondary);
+  transition: all var(--transition);
+}
+.secondaryBtn:hover { background: var(--bg-hover); color: var(--text-primary); }
+
+/* Waveform */
+.waveform {
+  display: flex; align-items: center; gap: 2px;
+  height: 60px; margin-bottom: 36px;
+  padding: 8px 0; overflow: hidden;
+  border-radius: var(--radius-md);
+}
+.bar {
+  flex: 1; min-width: 3px; max-width: 6px;
+  background: var(--accent); opacity: 0.25;
+  border-radius: 99px; transition: opacity var(--transition);
+}
+.bar:hover { opacity: 0.6; }
+
+/* Sections */
+.section { margin-bottom: 32px; }
+.sectionTitle {
+  font-family: var(--font-display); font-size: 18px; font-weight: 800;
+  margin-bottom: 16px; letter-spacing: -0.3px;
+}
+.description {
+  font-size: 15px; line-height: 1.8; color: var(--text-secondary);
+}
+.description p { margin-bottom: 16px; }
+.description a { color: var(--accent); text-decoration: underline; }
+
+/* Tags */
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  padding: 5px 14px; background: var(--bg-card);
+  border: 1px solid var(--border); border-radius: 99px;
+  font-size: 12.5px; color: var(--text-secondary); transition: all var(--transition);
+}
+.tag:hover { color: var(--accent); border-color: var(--accent); }
+
+/* Related */
+.relatedList { display: flex; flex-direction: column; gap: 0; }
+.relatedItem {
+  display: flex; gap: 14px; align-items: center;
+  padding: 14px 0; border-bottom: 1px solid var(--border);
+  transition: opacity var(--transition);
+}
+.relatedItem:last-child { border: none; }
+.relatedItem:hover { opacity: 0.8; }
+.relatedThumb {
+  width: 56px; height: 56px; border-radius: var(--radius-md);
+  background: var(--bg-card); overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+}
+.relatedThumb img { width: 100%; height: 100%; object-fit: cover; }
+.relatedInfo { flex: 1; }
+.relatedTitle { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.35; }
+.relatedMeta { font-size: 12px; color: var(--text-muted); }

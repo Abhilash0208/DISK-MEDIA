@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Build outputs
+dist/
+build/
+.next/
+
+# Environment files — NEVER commit these
+.env
+.env.local
+.env.production
+.env.development
+frontend/.env
+backend/.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Vercel
+.vercel/
+
+# Cache
+.eslintcache
+.cache/
